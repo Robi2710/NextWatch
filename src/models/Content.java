@@ -19,7 +19,17 @@ public abstract class Content {
         this.averageRating = averageRating;
         this.ratingCount = ratingCount;
     }
+    public void addGenre(Genre genre) {
+        if (!genres.contains(genre)) {
+            genres.add(genre);
+        }
+    }
 
+    public void updateRating(double newRating) {
+        this.averageRating = (this.averageRating * this.ratingCount + newRating) / (this.ratingCount + 1);
+        this.ratingCount++;
+    }
+    public abstract String getContentType();
     public int getId() {
         return id;
     }
@@ -62,5 +72,17 @@ public abstract class Content {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+    @Override
+    public String toString() {
+        return "Content{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", releaseYear=" + releaseYear +
+                ", director='" + director + '\'' +
+                ", genres=" + genres +
+                ", averageRating=" + averageRating +
+                ", ratingCount=" + ratingCount +
+                '}';
     }
 }
