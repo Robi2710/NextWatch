@@ -1,5 +1,6 @@
 package models;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class User {
@@ -14,7 +15,7 @@ public class User {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.watchedIds = watchedIds;
+        this.watchedIds = new HashSet<>();
     }
     public void markAsWatched(int contentId) {
         watchedIds.add(contentId);

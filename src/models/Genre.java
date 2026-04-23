@@ -12,5 +12,7 @@ public enum Genre {
     MUSICAL,
     ROMANCE,
     SCIENCE_FICTION,
-    THRILLER
+    THRILLER,
+    CRIME,
+    MYSTERY
 }
