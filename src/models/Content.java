@@ -1,6 +1,6 @@
 package models;
 import java.util.List;
-
+import java.util.ArrayList;
 public abstract class Content {
     private int id;
     private String title;
@@ -10,14 +10,14 @@ public abstract class Content {
     private double averageRating;
     private int ratingCount;
 
-    public Content(int id, String title, int releaseYear, String director, List<Genre> genres, double averageRating, int ratingCount) {
+    public Content(int id, String title, int releaseYear, String director) {
         this.id = id;
         this.title = title;
         this.releaseYear = releaseYear;
         this.director = director;
-        this.genres = genres;
-        this.averageRating = averageRating;
-        this.ratingCount = ratingCount;
+        this.genres = new ArrayList<>();
+        this.averageRating = 0.0;
+        this.ratingCount = 0;
     }
     public void addGenre(Genre genre) {
         if (!genres.contains(genre)) {

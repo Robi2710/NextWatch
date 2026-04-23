@@ -7,8 +7,8 @@ public class Series extends Content{
     private List<Episode> episodes;
     private boolean isOngoing;
 
-    public Series(int id, String title, int releaseYear, String director, List<Genre> genres, double averageRating, int ratingCount, int numberOfSeasons, boolean isOngoing) {
-        super(id, title, releaseYear, director, genres, averageRating, ratingCount);
+    public Series(int id, String title, int releaseYear, String director, int numberOfSeasons, boolean isOngoing) {
+        super(id, title, releaseYear, director);
         this.numberOfSeasons = numberOfSeasons;
         this.episodes = new ArrayList<>();
         this.isOngoing = isOngoing;

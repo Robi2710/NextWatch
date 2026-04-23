@@ -5,8 +5,8 @@ import java.util.List;
 public class Movie extends Content{
     private int durationMinutes;
 
-    public Movie(int id, String title, int releaseYear, String director, List<Genre> genres, double averageRating, int ratingCount, int durationMinutes) {
-        super(id, title, releaseYear, director, genres, averageRating, ratingCount);
+    public Movie(int id, String title, int releaseYear, String director, int durationMinutes) {
+        super(id, title, releaseYear, director);
         this.durationMinutes = durationMinutes;
     }
     @Override
