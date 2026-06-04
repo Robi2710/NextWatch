@@ -50,7 +50,9 @@ public class Rating {
         }
         this.score = score;
     }
+    public double getScore() { return score; }
     public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
     @Override
     public String toString() {
         return String.format("Rating{user=%d, content=%d, score=%.1f}", userId, contentId, score);

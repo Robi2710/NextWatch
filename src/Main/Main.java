@@ -10,8 +10,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ContentService contentService = new ContentService();
-        UserService userService = new UserService();
+        ContentService contentService = ContentService.getInstance();
+        UserService userService = UserService.getInstance();
 
         System.out.println("=".repeat(60));
         System.out.println("          NEXTWATCH - Platform Demo");
